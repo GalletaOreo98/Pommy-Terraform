@@ -14,10 +14,16 @@ variable "location" {
 }
 
 variable "tags" {
-  description = "All tags used"
   default = {
     environment = "dev"
     project = "pommy"
     created_by = "terraform"
   }
+  description = "All tags used"
+}
+
+variable "password" {
+  description = "SQl Server password"
+  type = string
+  sensitive = true
 }
